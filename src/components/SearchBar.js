@@ -5,10 +5,18 @@ class SearchBar extends React.Component {
         term: ''
     }
 
+    // Use => function as alternative instead of bind(this) 
+    onFormSubmit = (event) => {
+        // Prevent page refresh on enter
+        event.preventDefault();
+
+
+    }
+
     render(){
         return (
             <div className="ui segment">
-                <form className="ui form">
+                <form onSubmit={this.onFormSubmit} className="ui form">
                     <div className="field">
                         <label>Image Search</label>
                         <input 
