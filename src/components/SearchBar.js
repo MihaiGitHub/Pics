@@ -10,7 +10,7 @@ class SearchBar extends React.Component {
         // Prevent page refresh on enter
         event.preventDefault();
 
-
+        this.props.onSubmit(this.state.term);
     }
 
     render(){
